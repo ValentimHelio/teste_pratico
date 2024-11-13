@@ -34,21 +34,28 @@ namespace EISOL_TestePraticoWebForms
              * Você está livre para espiar os códigos e entender o seu funcionamento.
              * Só não vai me bagunçar os códigos pois deu muito trabalho fazer tudo isso aqui =/
              * */
-
             var pessoa = new DAO.PESSOAS();
 
-			// Parece que faltam algumas coisas aqui! =/
+            // Parece que faltam algumas coisas aqui! =/
 
-			// O Objeto pessoa não parece ser uma pessoa de verdade ainda. 
-			// As pessoas não são objetos mas aqui podemos considerá-las assim =S
-			// - Faça as devidas atribuições ao objeto 'pessoa' para que ela seja uma pessoa de verdade e feliz!
+            // O Objeto pessoa não parece ser uma pessoa de verdade ainda. 
+            // As pessoas não são objetos mas aqui podemos considerá-las assim =S
+            // - Faça as devidas atribuições ao objeto 'pessoa' para que ela seja uma pessoa de verdade e feliz!
 
-			// Verifique os tamanhos dos campos da tabela e a obrigatoriedade deles e faça o devido tratamento para evitar erros.
-			// - O leiaute da tabela em questão (TB_TESTE_PESSOAS) poderá ser verificado nos arquivos .sql anexados ao projeto.
+            // Verifique os tamanhos dos campos da tabela e a obrigatoriedade deles e faça o devido tratamento para evitar erros.
+            // - O leiaute da tabela em questão (TB_TESTE_PESSOAS) poderá ser verificado nos arquivos .sql anexados ao projeto.
 
-			// Coloque o seu lindo código aqui! (O_o)
+            // Coloque o seu lindo código aqui! (O_o)
+            pessoa.NOME = txtNome.Text;
+            pessoa.CPF = txtCpf.Text;
+            pessoa.RG = txtRg.Text;
+            pessoa.TELEFONE = txtTelefone.Text;
+            pessoa.EMAIL = txtEmail.Text;
+            pessoa.SEXO = ddlSexo.SelectedValue;
+            pessoa.DATA_NASCIMENTO = DateTime.Parse(txtDataNascimento.Text);
 
-			this.Gravar(pessoa);
+            this.Gravar(pessoa);
+            this.Limpar();
         }
 
         /// <summary>
@@ -77,6 +84,13 @@ namespace EISOL_TestePraticoWebForms
         {
             // Isso é apenas um bônus!
             // Tente fazê-lo e colocar em um lugar apropriado no código.
+            txtNome.Text = string.Empty;
+            txtCpf.Text = string.Empty;
+            txtRg.Text = string.Empty;
+            txtTelefone.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            ddlSexo.SelectedValue = string.Empty;
+            txtDataNascimento.Text = string.Empty;
         }
     }
 }

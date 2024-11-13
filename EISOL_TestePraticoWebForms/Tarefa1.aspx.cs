@@ -38,8 +38,20 @@ namespace EISOL_TestePraticoWebForms
 
 			// Coloque o seu lindo código aqui! (O_o)
 
-			this.Gravar(pessoa);
-		}
+
+			pessoa.NOME = txtNome.Text;
+			pessoa.CPF = txtCpf.Text;
+			pessoa.RG = txtRg.Text;
+			pessoa.TELEFONE = txtTelefone.Text;
+			pessoa.EMAIL = txtEmail.Text;
+			pessoa.SEXO = ddlSexo.SelectedValue;
+			pessoa.DATA_NASCIMENTO = DateTime.Parse(txtDataNascimento.Text);
+
+
+            this.Gravar(pessoa);
+
+			this.Limpar();
+        }
 
 		/// <summary>
 		/// Persistir os dados no Banco.
@@ -65,8 +77,15 @@ namespace EISOL_TestePraticoWebForms
 		/// </summary>
 		private void Limpar()
 		{
-			// Isso é apenas um bônus!
-			// Tente fazê-lo e colocar em um lugar apropriado no código.
-		}
+            // Isso é apenas um bônus!
+            // Tente fazê-lo e colocar em um lugar apropriado no código.
+            txtNome.Text = string.Empty;
+            txtCpf.Text = string.Empty;
+            txtRg.Text = string.Empty;
+			txtTelefone.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            ddlSexo.SelectedValue = string.Empty;
+			txtDataNascimento.Text = string.Empty;
+        }
 	}
 }
