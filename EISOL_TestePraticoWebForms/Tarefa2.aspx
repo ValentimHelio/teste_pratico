@@ -62,27 +62,27 @@
                             <label>
                                 Nome
                             </label>
-                            <asp:TextBox ID="txtNome" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtNome" runat="server" CssClass="form-control" MaxLength="50"></asp:TextBox>
                         </div>
                         <div class="col-md-2 col-sm-12 col-xs-12">
                             <label>
                                 CPF
                             </label>
                              <%--Colocar máscara de CPF aqui será um bônus--%>
-                            <asp:TextBox ID="txtCpf" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtCpf" runat="server" CssClass="form-control" MaxLength="14"></asp:TextBox>
                         </div>
                         <div class="col-md-2 col-sm-12 col-xs-12">
                             <label>
                                 RG
                             </label>
-                            <asp:TextBox ID="txtRg" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtRg" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
                         </div>
                         <div class="col-md-2 col-sm-12 col-xs-12">
                             <label>
                                 Telefone
                             </label>
                             <%--Colocar máscara de telefone aqui será um bônus--%>
-                            <asp:TextBox ID="txtTelefone" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtTelefone" runat="server" CssClass="form-control" MaxLength="15"></asp:TextBox>
                         </div>
                     </div>
                     <div class="row">
@@ -91,7 +91,7 @@
                                 Email
                             </label>
                             <%--Colocar expressão regular pra validar email aqui será um bônus plus 2.0 Ultimate Edition Deluxe Ultra Master Blaster --%>
-                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" MaxLength="50"></asp:TextBox>
                         </div>
                         <div class="col-md-3 col-sm-12 col-xs-12">
                             <label>
@@ -108,7 +108,7 @@
                                 Data de nascimento
                             </label>
                             <%--Colocar máscara de data aqui será um bônus--%>
-                            <asp:TextBox ID="txtDataNascimento" runat="server" CssClass="form-control" placeholder="DD/MM/YYYY"></asp:TextBox>
+                            <asp:TextBox ID="txtDataNascimento" runat="server" CssClass="form-control" MaxLength="10" placeholder="DD/MM/YYYY"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
     </div>
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <asp:Button ID="btnGravar" runat="server" Text="Gravar" CssClass="btn btn-default" />
+            <asp:Button ID="btnGravar" runat="server" Text="Gravar" CssClass="btn btn-default" OnClick="btnGravar_Click" />
             <asp:Button ID="btnEstranho" runat="server" Text="Não clique aqui!" CssClass="btn btn-danger" />
             <a class="btn btn-primary" href="Default.aspx">Voltar</a>
         </div>
@@ -133,4 +133,5 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ScriptContent" runat="server">
     <script src="Scripts/ClientSide/tarefa2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </asp:Content>
